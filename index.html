@@ -1,0 +1,70 @@
+﻿<!--
+    Course Name: CPSC 1045
+    Prof: Saeed Mirjalili
+    Student Name: Tim Supan
+    Date: July 15, 2022
+-->
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Canvas: Monsters Zoo</title>
+    <link href="css/sstyle.css" rel="stylesheet" />
+    <!--external CSS-->
+    <script src="js/drawingLibrary.js"></script>
+    <script src="js/shapes.js"></script>
+</head>
+
+<body onload="setup()">
+    <!-- removed onload="drawOnCanvas()"-->
+    <div id="container">
+        <span>Choose the Monster: </span><br />
+        <select id="monsterSelect" class="inValue">
+            <option value="happyM">Happy Monster</option>
+            <option value="angryM">Angry Monster</option>
+        </select>
+
+        <div id="gridLbl">
+            <label>Show Grid</label><input id="showGrid" type="checkbox" class="inValue" />
+        </div>
+        <br />
+        <br />
+        <!--when the page loads, the happy monster drawn-->
+        <label>X: </label> <input id="x" type="number" value="300" min="0" step="3" class="inValue" />
+        <!--when the value changes, drawShapes() function is called-->
+        <label>Y: </label> <input id="y" type="number" value="225" min="0" step="3" class="inValue" />
+        <label>Color:</label><input id="shapeColor" type="color" value="#999933" class="inValue" />
+        <br />
+        <label>Width: </label> <input id="width" type="number" value="104" min="0" step="3" class="inValue" />
+        <!--I set step="3", then the values are changed by 3 instead of 1, this way the movement or scaling is not very slow. You can change step to 1 to see what will be difference.-->
+        <label>Height: </label> <input id="height" type="number" value="143" min="0" step="3" class="inValue" />
+        <label>Move Step:</label><input id="moveStep" type="number" value="5" class="inValue" />
+        <br />
+        <canvas id="drawingBox1" width="700" height="600" tabindex="1">
+            Your browser does not support HTML5 Canvas.
+        </canvas>
+
+        <table>
+            <tr>
+                <td><button id='NW' class='moveBtn'>&nwArr;</button></td>
+                <td><button id='N' class='moveBtn'>&uArr;</button></td>
+                <td><button id='NE' class='moveBtn'>&neArr;</button></td>
+            </tr>
+            <tr>
+                <td><button id='W' class='moveBtn'>&lArr;</button></td>
+                <td><button id='C' class='moveBtn'>Reset</button></td>
+                <td><button id='E' class='moveBtn'>&rArr;</button></td>
+            </tr>
+            <tr>
+                <td><button id='SW' class='moveBtn'>&swArr;</button></td>
+                <td><button id='S' class='moveBtn'>&dArr;</button></td>
+                <td><button id='SE' class='moveBtn'>&seArr;</button></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

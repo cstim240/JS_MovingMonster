@@ -1,0 +1,45 @@
+﻿/*Prof: Saeed Mirjalili
+Tim Supan
+CPSC 1045 
+July 15, 2022*/
+
+canvas {
+    border: 1px solid darkcyan;
+    background-color: lightcyan;
+    margin-top: 15px;
+}
+
+#container {
+    width: 705px;
+    margin: auto; /*to display everything in the middle of the page*/
+}
+select, input[type=number] {
+    display: inline-block;
+    width: 110px;
+    margin-right: 30px;
+    text-align:left;
+}
+
+label {
+    display:inline-block;
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+#gridLbl {
+    float:right;
+}
+button {
+    width: 80px;
+    height: 40px;
+    font-weight: bold;
+}
+
+table {
+    margin: 0 auto;
+    padding: 5px;
+}
+
+td {
+    padding: 7px;
+}
